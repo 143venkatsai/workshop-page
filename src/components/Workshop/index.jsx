@@ -3,6 +3,7 @@ import {
   CertificateContainer,
   CertificateDetails,
   Container,
+  EventsTitle,
   InstructorContainer,
   WorkshopOverview,
   WorkshopTitle,
@@ -77,14 +78,12 @@ const Workshop = ({ workshop }) => {
             ))}
           </InstructorContainer>
         </div>
-        <div>
-          <WorkshopTitle>
-            Upcoming <span>Events</span>
-          </WorkshopTitle>
-          {/* <Events /> */}
-          <Home showAll={3} />
-        </div>
       </Container>
+
+      <EventsTitle>
+        Upcoming <span>Events</span>
+      </EventsTitle>
+      <Home showAll={3} />
     </>
   );
 };

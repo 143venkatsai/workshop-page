@@ -166,3 +166,22 @@ export const InstructorContainer = styled.div`
     margin: 0;
   }
 `;
+
+export const EventsTitle = styled.h2`
+  font-size: 32px;
+  font-weight: 600;
+  color: #212121;
+  letter-spacing: -0.05px;
+  line-height: 140%;
+  max-width: 1200px;
+  margin: auto;
+  margin: 40px auto 20px auto;
+
+  span {
+    color: #fc2947;
+  }
+
+  @media (max-width: 786px) {
+    margin: 40px 24px 20px 24px;
+  }
+`;
