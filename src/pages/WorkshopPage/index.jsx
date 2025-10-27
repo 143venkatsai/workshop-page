@@ -10,11 +10,16 @@ import calender from "../../assets/calender.png";
 import clock from "../../assets/clock.png";
 import people from "../../assets/people.png";
 import backIcon from "../../assets/backIcon.png";
+import bottomImage1 from "../../assets/bottomImage1.png";
+import bottomImage2 from "../../assets/bottomImage2.png";
+import LMSImage from "../../assets/LMSImage.png";
 
 import {
   BackContainer,
+  BottomContainer,
   CircleImage,
   EnrollSection,
+  LmsDetails,
   MainContainer,
   OriginalPrice,
   Price,
@@ -80,6 +85,25 @@ const WorkshopPage = () => {
         </WorkshopContainer>
       </MainContainer>
       <Workshop workshop={workshop} />
+      <MainContainer>
+        <img src={bottomImage1} alt="bottomImage1" className="bottom-image-1" />
+        <img src={bottomImage2} alt="bottomImage2" className="bottom-image-2" />
+        <BottomContainer>
+          <LmsDetails>
+            <h1>
+              Our <span>LMS Platform</span>
+            </h1>
+            <p>
+              AGH LMS is a centralized digital platform designed to deliver
+              structured Aptitude, Coding, Soft Skills, Domain-Specific, and
+              Career-Focused training to students from Engineering and Arts &
+              Science streams.
+            </p>
+            <button>Explore Now</button>
+          </LmsDetails>
+          <img src={LMSImage} alt="LMS" />
+        </BottomContainer>
+      </MainContainer>
     </>
   );
 };

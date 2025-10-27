@@ -3,6 +3,35 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
   background-color: #f4f4f4;
   position: relative;
+
+  .bottom-image-1 {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    height: 240px;
+    z-index: 0;
+  }
+
+  .bottom-image-2 {
+    position: absolute;
+    lefft: 0;
+    bottom: 0;
+    width: 200px;
+    height: 240px;
+    z-index: 0;
+  }
+
+  @media (max-width: 786px) {
+    .bottom-image-1 {
+      width: 100px;
+      height: 120px;
+    }
+
+    .bottom-image-2 {
+      width: 200px;
+      height: 300px;
+    }
+  }
 `;
 
 export const CircleImage = styled.img`
@@ -174,5 +203,69 @@ export const EnrollSection = styled.div`
     font-size: 16px;
     font-weight: 500;
     color: #6f7176;
+  }
+`;
+
+export const BottomContainer = styled.div`
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 56px;
+  padding: 64px 0px;
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+
+  img {
+    height: 371px;
+    width: 572px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 39px 24px;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+`;
+
+export const LmsDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #212121;
+    letter-spacing: -0.05px;
+    line-height: 140%;
+    margin: 0;
+  }
+
+  span {
+    color: #fc2947;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  button {
+    background-color: #fc2947;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: flex-start;
   }
 `;

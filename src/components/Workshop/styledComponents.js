@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   max-width: 1200px;
   margin: auto;
   padding: 20px 0px;
+
+  scroll-behaviour: smooth;
 
   @media (max-width: 786px) {
     padding: 0px 20px;
@@ -18,6 +20,10 @@ export const WorkshopOverview = styled.p`
   font-weight: 400;
   line-height: 150%;
   color: #262626;
+
+  @media (max-width: 786px) {
+    font-size: 16px;
+  }
 `;
 
 export const WorkshopTitle = styled.h1`
@@ -26,9 +32,13 @@ export const WorkshopTitle = styled.h1`
   color: #212121;
   letter-spacing: -0.05px;
   line-height: 140%;
-
+  margin: 0;
   span {
     color: #fc2947;
+  }
+
+  @media (max-width: 786px) {
+    font-size: 24px;
   }
 `;
 
@@ -55,18 +65,25 @@ export const WorkshopTopic = styled.li`
     color: #4b4444;
     margin: 0;
   }
+
+  @media (max-width: 786px) {
+    p {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const CertificateContainer = styled.div`
   display: flex;
-  //   align-items: center;
   gap: 40px;
+  margin-top: 20px;
 
   img {
     height: 240px;
     width: 390px;
     border: 1px solid #dcdcdc;
     padding: 8px;
+    box-sizing: border-box;
   }
 
   @media (max-width: 786px) {
@@ -77,6 +94,7 @@ export const CertificateContainer = styled.div`
     img {
       width: 100%;
       height: auto;
+      max-width: 100%;
     }
   }
 `;
@@ -98,6 +116,10 @@ export const CertificateDetails = styled.div`
     color: #343434;
     line-height: 150%;
     margin: 0;
+
+    @media (max-width: 786px) {
+      font-size: 20px;
+    }
   }
 
   p {
@@ -106,6 +128,10 @@ export const CertificateDetails = styled.div`
     color: #4b4444;
     line-height: 150%;
     margin: 0;
+
+    @media (max-width: 786px) {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -113,6 +139,7 @@ export const InstructorContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin-top: 20px;
 
   ul {
     display: flex;
@@ -129,6 +156,10 @@ export const InstructorContainer = styled.div`
     border: 1px solid #dcdcdc;
     border-radius: 12px;
     padding: 16px 32px;
+
+    @media (max-width: 786px) {
+      padding: 16px 24px;
+    }
   }
 
   div {
@@ -158,12 +189,28 @@ export const InstructorContainer = styled.div`
     margin: 0;
   }
 
+  .role {
+    font-size: 20px;
+    font-weight: 400;
+    color: #4b4444;
+    line-height: 150%;
+    margin: 0;
+
+    @media (max-width: 786px) {
+      font-size: 18px;
+    }
+  }
+
   p {
     font-size: 20px;
     font-weight: 400;
     color: #4b4444;
     line-height: 150%;
     margin: 0;
+
+    @media (max-width: 786px) {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -175,13 +222,87 @@ export const EventsTitle = styled.h2`
   line-height: 140%;
   max-width: 1200px;
   margin: auto;
-  margin: 40px auto 20px auto;
+  margin: 20px auto 20px auto;
 
   span {
     color: #fc2947;
   }
 
   @media (max-width: 786px) {
-    margin: 40px 24px 20px 24px;
+    margin: 40px 24px 10px 24px;
+    font-size: 24px;
+  }
+`;
+
+export const AboutDescription = styled.p`
+  font-size: 20px;
+  font-weight: 400;
+  color: #262626;
+  line-height: 150%;
+  letter-spacing: -0.05px;
+  margin: 0;
+  margin-top: -10px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+`;
+
+export const AboutHeading = styled.h2`
+  font-size: 24px;
+  font-weight: 600;
+  color: #212121;
+  letter-spacing: -0.05px;
+  line-height: 140%;
+  margin: 0;
+`;
+
+export const TabsContainer = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0px;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #6f7176;
+    cursor: pointer;
+    line-height: 120%;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f1f2f3;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a.active {
+    color: #2583c0;
+    border-bottom: 3px solid #2583c0;
+  }
+
+  a:hover {
+    color: #2583c0;
+  }
+
+  @media (max-width: 786px) {
+    width: 90%;
   }
 `;
