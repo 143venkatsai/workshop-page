@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 import { ChevronLeft } from "lucide-react";
@@ -35,6 +35,8 @@ import {
 import Workshop from "../../components/Workshop";
 
 const WorkshopPage = () => {
+  const [register, setRegister] = useState(false);
+  const [animate, setAnimate] = useState(false);
   const { id } = useParams();
 
   const navigate = useNavigate();
@@ -44,6 +46,14 @@ const WorkshopPage = () => {
 
   const handleClick = () => {
     navigate(-1);
+  };
+
+  const handleRegsiter = () => {
+    setAnimate(true);
+    setTimeout(() => {
+      setRegister(true);
+      setAnimate(false);
+    }, 600); // duration same as CSS transition
   };
 
   return (
@@ -69,18 +79,28 @@ const WorkshopPage = () => {
             </WorkshopInfoDetails>
           </WorkshopInfo>
           <WorkshopPricingSection>
-            <WorkshopPrice>
-              <Price>
-                {workshop.price}
-                <span> + GST</span>
-              </Price>
-              <OriginalPrice>{workshop.originalPrice}</OriginalPrice>
-            </WorkshopPrice>
-            <RegisterButton>Register Now</RegisterButton>
-            <EnrollSection>
-              <img src={people} alt="students" />
-              <p>250 already enrolled</p>
-            </EnrollSection>
+            {register ? (
+              <>
+                <RegisterButton>Register Now</RegisterButton>
+              </>
+            ) : (
+              <>
+                <WorkshopPrice>
+                  <Price>
+                    {workshop.price}
+                    <span> + GST</span>
+                  </Price>
+                  <OriginalPrice>{workshop.originalPrice}</OriginalPrice>
+                </WorkshopPrice>
+                <RegisterButton onClick={handleRegsiter}>
+                  Register Now
+                </RegisterButton>
+                <EnrollSection>
+                  <img src={people} alt="students" />
+                  <p>250 already enrolled</p>
+                </EnrollSection>
+              </>
+            )}
           </WorkshopPricingSection>
         </WorkshopContainer>
       </MainContainer>

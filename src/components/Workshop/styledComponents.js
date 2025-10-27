@@ -9,9 +9,11 @@ export const Container = styled.div`
   padding: 20px 0px;
 
   scroll-behaviour: smooth;
+  // scroll-margin-top: 100px;
 
   @media (max-width: 786px) {
     padding: 0px 20px;
+    // scroll-margin-top: 80px;
   }
 `;
 

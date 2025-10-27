@@ -17,6 +17,7 @@ import {
 import ticks from "../../assets/ticks.png";
 import certificate from "../../assets/certificate.png";
 import Home from "../../pages/Home";
+import WorkshopCard from "../WorkShopCard";
 // import Events from "../Events";
 // import { HomeContainer } from "../../pages/Home/styledComponents";
 
@@ -34,7 +35,15 @@ const Workshop = ({ workshop }) => {
     setActive(link);
     const section = document.getElementById(link);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 50;
+      const elementPosition =
+        section.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
   return (
@@ -119,7 +128,7 @@ const Workshop = ({ workshop }) => {
         <EventsTitle>
           Upcoming <span>Events</span>
         </EventsTitle>
-        <Home showAll={3} />
+        <WorkshopCard showAll={3} />
       </div>
       <div id="about">
         <Container>
