@@ -77,14 +77,14 @@ const Workshop = ({ workshop }) => {
             ))}
           </InstructorContainer>
         </div>
+        <div>
+          <WorkshopTitle>
+            Upcoming <span>Events</span>
+          </WorkshopTitle>
+          {/* <Events /> */}
+          <Home showAll={3} />
+        </div>
       </Container>
-      <div>
-        <WorkshopTitle style={{ padding: "16px 24px" }}>
-          Upcoming <span>Events</span>
-        </WorkshopTitle>
-        {/* <Events /> */}
-        <Home showAll={3} />
-      </div>
     </>
   );
 };
