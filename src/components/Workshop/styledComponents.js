@@ -72,7 +72,7 @@ export const CertificateContainer = styled.div`
   @media (max-width: 786px) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0px;
+    gap: 20px;
 
     img {
       width: 100%;
