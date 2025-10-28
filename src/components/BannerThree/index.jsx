@@ -6,11 +6,11 @@ import {
   BannerSection,
 } from "./styledComponents";
 
-import bannerTwo from "../../assets/bannerTwo.png";
+import bannerThree from "../../assets/bannerThree.png";
 import bannerCircle1 from "../../assets/bannerCircle1.png";
 import bannerCircle2 from "../../assets/bannerCircle2.png";
 
-const BannerTwo = () => {
+const BannerThree = () => {
   return (
     <>
       <BannerContainer>
@@ -27,11 +27,11 @@ const BannerTwo = () => {
             </p>
           </div>
 
-          <BannerImage src={bannerTwo} alt="banner" />
+          <BannerImage src={bannerThree} alt="banner" />
         </BannerSection>
       </BannerContainer>
     </>
   );
 };
 
-export default BannerTwo;
+export default BannerThree;

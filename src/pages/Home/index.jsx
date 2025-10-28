@@ -9,6 +9,7 @@ import { TopContainer } from "./styledComponents";
 import BannerOne from "../../components/BannerOne";
 import BannerTwo from "../../components/BannerTwo";
 import WorkshopCard from "../../components/WorkShopCard";
+import BannerThree from "../../components/BannerThree";
 
 const workshopDetails = [
   {
@@ -51,8 +52,9 @@ const workshopDetails = [
 const Home = () => {
   return (
     <>
-      <BannerOne />
+      {/* <BannerOne /> */}
       {/* <BannerTwo /> */}
+      <BannerThree />
       <TopContainer>
         <div className="top">
           <p>Why Join </p>

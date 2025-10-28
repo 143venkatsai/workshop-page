@@ -7,6 +7,7 @@ import {
   Container,
   EventsTitle,
   InstructorContainer,
+  MeetContainer,
   TabsContainer,
   WorkshopOverview,
   WorkshopTitle,
@@ -16,6 +17,8 @@ import {
 
 import ticks from "../../assets/ticks.png";
 import certificate from "../../assets/certificate.png";
+import googlMeet from "../../assets/googleMeet.png";
+
 import Home from "../../pages/Home";
 import WorkshopCard from "../WorkShopCard";
 // import Events from "../Events";
@@ -28,7 +31,7 @@ const tabs = [
   { id: 4, name: "About AGH", link: "about" },
 ];
 
-const Workshop = ({ workshop }) => {
+const Workshop = ({ workshop, success }) => {
   const [active, setActive] = useState("overview");
 
   const handleTabClick = (link) => {
@@ -64,6 +67,15 @@ const Workshop = ({ workshop }) => {
         ))}
       </TabsContainer>
       <Container>
+        {success && (
+          <MeetContainer>
+            <img src={googlMeet} alt="google-meet" />
+            <p>
+              The Google Meet link will be sent to your email 30 minutes before
+              the workshop.
+            </p>
+          </MeetContainer>
+        )}
         <div id="overview">
           <WorkshopOverview>{workshop.overview}</WorkshopOverview>
           <div>

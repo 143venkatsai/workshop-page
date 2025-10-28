@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
-import { ChevronLeft } from "lucide-react";
+import { FaCircleCheck } from "react-icons/fa6";
 
 import mockData from "../../data/mockData";
 
@@ -24,6 +25,8 @@ import {
   OriginalPrice,
   Price,
   RegisterButton,
+  SuccessButton,
+  SuccessContainer,
   WorkshopContainer,
   WorkshopDescription,
   WorkshopInfo,
@@ -36,7 +39,6 @@ import Workshop from "../../components/Workshop";
 
 const WorkshopPage = () => {
   const [register, setRegister] = useState(false);
-  const [animate, setAnimate] = useState(false);
   const { id } = useParams();
 
   const navigate = useNavigate();
@@ -46,14 +48,6 @@ const WorkshopPage = () => {
 
   const handleClick = () => {
     navigate(-1);
-  };
-
-  const handleRegsiter = () => {
-    setAnimate(true);
-    setTimeout(() => {
-      setRegister(true);
-      setAnimate(false);
-    }, 600); // duration same as CSS transition
   };
 
   return (
@@ -80,9 +74,23 @@ const WorkshopPage = () => {
           </WorkshopInfo>
           <WorkshopPricingSection>
             {register ? (
-              <>
-                <RegisterButton>Register Now</RegisterButton>
-              </>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key="success"
+                  initial={{ opacity: 0, x: 60 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -60 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                  <SuccessContainer>
+                    <SuccessButton disabled={true}>Register Now</SuccessButton>
+                    <div>
+                      <FaCircleCheck className="check-icon" />
+                      <p>You're already registered for this workshop.</p>
+                    </div>
+                  </SuccessContainer>
+                </motion.div>
+              </AnimatePresence>
             ) : (
               <>
                 <WorkshopPrice>
@@ -92,7 +100,7 @@ const WorkshopPage = () => {
                   </Price>
                   <OriginalPrice>{workshop.originalPrice}</OriginalPrice>
                 </WorkshopPrice>
-                <RegisterButton onClick={handleRegsiter}>
+                <RegisterButton onClick={() => setRegister(true)}>
                   Register Now
                 </RegisterButton>
                 <EnrollSection>
@@ -104,7 +112,9 @@ const WorkshopPage = () => {
           </WorkshopPricingSection>
         </WorkshopContainer>
       </MainContainer>
-      <Workshop workshop={workshop} />
+
+      <Workshop workshop={workshop} success={register} />
+
       <MainContainer>
         <img src={bottomImage1} alt="bottomImage1" className="bottom-image-1" />
         <img src={bottomImage2} alt="bottomImage2" className="bottom-image-2" />

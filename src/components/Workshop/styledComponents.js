@@ -308,3 +308,42 @@ export const TabsContainer = styled.div`
     width: 90%;
   }
 `;
+
+export const MeetContainer = styled.div`
+  background-color: #ccffed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin-top: 20px;
+
+  img {
+    width: 24px;
+    height: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: 600;
+    font-style: Italic;
+    color: #057a63;
+    line-height: 160%;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    p {
+      font-size: 14px;
+    }
+
+    img {
+      margin-top: 5px;
+    }
+  }
+`;

@@ -269,3 +269,57 @@ export const LmsDetails = styled.div`
     align-self: flex-start;
   }
 `;
+
+export const SuccessContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  div .check-icon {
+    color: #008000;
+    height: 20px;
+    width: 20px;
+  }
+
+  div p {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.05px;
+    color: #6f6f6f;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 0px;
+
+    div p {
+      font-size: 16px;
+    }
+  }
+`;
+
+export const SuccessButton = styled.button`
+  background-color: #b3b3b3;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 30px;
+  border-radius: 8px;
+  border: none;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 786px) {
+    padding: 12px 40px;
+  }
+`;
