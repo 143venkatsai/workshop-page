@@ -80,6 +80,10 @@ export const BannerSection = styled.div`
       height: 155px;
     }
   }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    margin: 20px 40px;
+  }
 `;
 
 export const BannerImage = styled.img`

@@ -15,6 +15,10 @@ export const Container = styled.div`
     padding: 0px 20px;
     // scroll-margin-top: 80px;
   }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    padding: 20px 40px;
+  }
 `;
 
 export const WorkshopOverview = styled.p`
@@ -234,6 +238,10 @@ export const EventsTitle = styled.h2`
     margin: 40px 24px 10px 24px;
     font-size: 24px;
   }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    padding: 0px 40px;
+  }
 `;
 
 export const AboutDescription = styled.p`
@@ -306,6 +314,10 @@ export const TabsContainer = styled.div`
 
   @media (max-width: 786px) {
     width: 90%;
+  }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    padding: 20px 40px;
   }
 `;
 

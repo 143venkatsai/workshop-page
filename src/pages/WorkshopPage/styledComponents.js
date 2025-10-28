@@ -56,6 +56,10 @@ export const WorkshopContainer = styled.div`
   @media (max-width: 768px) {
     padding: 39px 24px;
   }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    padding: 20px 40px;
+  }
 `;
 
 export const BackContainer = styled.button`
@@ -230,6 +234,14 @@ export const BottomContainer = styled.div`
     img {
       width: 100%;
       height: auto;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    padding: 20px 40px;
+
+    img {
+      height: 300px;
     }
   }
 `;

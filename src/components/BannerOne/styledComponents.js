@@ -32,4 +32,8 @@ export const BannerContainer = styled.div`
       font-size: 16px;
     }
   }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 20px 40px;
+  }
 `;

@@ -52,9 +52,9 @@ const workshopDetails = [
 const Home = () => {
   return (
     <>
-      {/* <BannerOne /> */}
-      {/* <BannerTwo /> */}
-      <BannerThree />
+      <BannerOne />
+      {/* <BannerTwo />
+      <BannerThree /> */}
       <TopContainer>
         <div className="top">
           <p>Why Join </p>

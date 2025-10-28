@@ -80,15 +80,22 @@ export const BannerSection = styled.div`
       height: 155px;
     }
   }
+  @media (min-width: 769px) and (max-width: 1199px) {
+    margin: 20px 40px;
+  }
 `;
 
 export const BannerImage = styled.img`
   object-fit: cover;
-  max-width: 588px;
+  max-width: 500px;
   max-height: 292px;
 
   @media (max-width: 768px) {
     max-width: 100%;
     max-height: 100%;
+  }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    max-width: 400px;
   }
 `;

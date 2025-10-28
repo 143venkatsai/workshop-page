@@ -121,4 +121,8 @@ export const TopContainer = styled.div`
       border-right: none;
     }
   }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    margin: 20px 40px;
+  }
 `;

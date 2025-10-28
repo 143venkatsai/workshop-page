@@ -12,6 +12,10 @@ export const HomeContainer = styled.div`
     padding: 24px;
     // width: 100%;
   }
+
+  @media (min-width: 769px) and (max-width: 1199px) {
+    padding: 20px 40px;
+  }
 `;
 
 export const CardContainer = styled.ul`
