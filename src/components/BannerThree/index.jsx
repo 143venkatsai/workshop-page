@@ -19,7 +19,7 @@ const BannerThree = () => {
         <BannerSection>
           <div>
             <h1>
-              Master <span>New Skills</span> with <br /> Expert-Led Workshops
+              Master <span>New Skills</span> withExpert-Led Workshops
             </h1>
             <p>
               Build a strong foundation in programming and aptitude — learn,

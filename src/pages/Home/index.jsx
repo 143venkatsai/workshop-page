@@ -54,7 +54,7 @@ const Home = () => {
     <>
       {/* <BannerOne /> */}
       <BannerTwo />
-      {/* <BannerThree />  */}
+      {/* <BannerThree /> */}
       <TopContainer>
         <div className="top">
           <p>Why Join </p>

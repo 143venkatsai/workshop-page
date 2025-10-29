@@ -22,7 +22,7 @@ export const BannerContainer = styled.div`
 
   @media (max-width: 768px) {
     .circle1 {
-      width: 80px;
+      width: 75px;
       height: 80px;
     }
 
@@ -41,9 +41,13 @@ export const BannerSection = styled.div`
   margin: 0px auto;
   padding: 50px 0px;
 
+  div {
+    width: 50%;
+  }
+
   div h1 {
     font-size: 48px;
-    font-weight: 600;
+    font-weight: 700;
     color: #212121;
     margin: auto;
 
@@ -73,6 +77,7 @@ export const BannerSection = styled.div`
     div {
       order: 2;
       margin-top: 20px;
+      width: 100%;
     }
 
     img {
@@ -87,12 +92,15 @@ export const BannerSection = styled.div`
 
 export const BannerImage = styled.img`
   object-fit: cover;
-  max-width: 500px;
+  //   max-width: 500px;
   max-height: 292px;
+
+  width: 50%;
 
   @media (max-width: 768px) {
     max-width: 100%;
     max-height: 100%;
+    width: 100%;
   }
 
   @media (min-width: 769px) and (max-width: 1199px) {
